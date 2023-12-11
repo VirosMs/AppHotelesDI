@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppHoteles</string>
+    <string name="logo_imagen">Logo Imagen</string>
+    <string name="user">User</string>
+    <string name="user_image">User Image</string>
+    <string name="login">Login</string>
+    <string name="search">Search</string>
+    <string name="image_hotel">Image Hotel</string>
+</resources>
