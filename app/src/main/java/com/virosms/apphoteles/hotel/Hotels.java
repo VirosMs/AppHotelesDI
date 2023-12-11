@@ -1,4 +1,4 @@
-package com.virosms.apphoteles;
+package com.virosms.apphoteles.hotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import com.virosms.apphoteles.R;
+import com.virosms.apphoteles.Visited;
 import com.virosms.apphoteles.databinding.ActivityHotelsBinding;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Hotels extends AppCompatActivity {
 
@@ -59,7 +58,7 @@ public class Hotels extends AppCompatActivity {
         binding.hotelsRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         binding.hotelsRecyclerView.setAdapter(new HotelAdapter(images, names, addresses));
 
-
+        binding.hotelsRecyclerView.addItemDecoration(new SpaceItemDecoration(30));
     }
 
     @Override

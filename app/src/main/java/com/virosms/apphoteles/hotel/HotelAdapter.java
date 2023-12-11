@@ -1,4 +1,4 @@
-package com.virosms.apphoteles;
+package com.virosms.apphoteles.hotel;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.virosms.apphoteles.R;
 
 import java.util.List;
 

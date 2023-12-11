@@ -16,7 +16,7 @@
             android:name=".Visited"
             android:exported="false" />
         <activity
-            android:name=".Hotels"
+            android:name=".hotel.Hotels"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
