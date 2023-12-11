@@ -8,20 +8,56 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.virosms.apphoteles.databinding.ActivityHotelsBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Hotels extends AppCompatActivity {
 
+    List<Integer> images = new ArrayList<Integer>() {{
+        add(R.drawable.hotel1);
+        add(R.drawable.hotel2);
+        add(R.drawable.hotel3);
+        add(R.drawable.hotel4);
+        add(R.drawable.hotel5);
+    }};
+
+    List<String> names = new ArrayList<String>() {{
+        add("Charles Hotel");
+        add("Hotel 2");
+        add("Hotel 3");
+        add("Hotel 4");
+        add("Hotel 5");
+    }};
+
+    List<String> addresses = new ArrayList<String>() {{
+        add("Av. 1");
+        add("Av. 2");
+        add("Av. 3");
+        add("Av. 4");
+        add("Av. 5");
+    }};
+
+    ActivityHotelsBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotels);
+        binding = ActivityHotelsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Charles Hotel");
 
+
+        binding.toolbar.setTitle("Charles Hotel");
+        setSupportActionBar(binding.toolbar);
+
+        binding.hotelsRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        binding.hotelsRecyclerView.setAdapter(new HotelAdapter(images, names, addresses));
 
 
     }

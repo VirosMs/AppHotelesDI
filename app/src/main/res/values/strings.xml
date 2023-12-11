@@ -6,4 +6,8 @@
     <string name="login">Login</string>
     <string name="search">Search</string>
     <string name="image_hotel">Image Hotel</string>
+    <string name="hotel_name">Hotel Name</string>
+    <string name="hotel_address">Hotel Address</string>
+    <string name="favorite_icon">Favorite Icon</string>
+    <string name="hotel_image">Hotel Image</string>
 </resources>

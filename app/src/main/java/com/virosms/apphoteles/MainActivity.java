@@ -8,18 +8,20 @@ import android.renderscript.ScriptGroup;
 import android.view.View;
 import android.widget.Button;
 
+import com.virosms.apphoteles.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
+    ActivityMainBinding binding;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        Button btnLogin = (Button)findViewById(R.id.loginButton);
-
-        btnLogin.setOnClickListener(v -> {
+        binding.loginButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, Hotels.class);
             startActivity(intent);
         });
